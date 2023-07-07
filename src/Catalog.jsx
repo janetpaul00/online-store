@@ -1,10 +1,7 @@
-import Navbar from "./Navbar";
-
 export default function Catalog() {
   return (
     <>
-      <Navbar>Navbar</Navbar>
-      <div>Catalog</div>
+      <div>This is the Catalog</div>
     </>
   );
 }

@@ -1,14 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
+import Hero from "./Hero";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
-  return (
-    <div id="container">
-      <h1>Rept</h1>
-    </div>
-  );
+  return <Hero />;
 }
 
 export default App;

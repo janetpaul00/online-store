@@ -72,3 +72,17 @@ h1 {
   padding-block: 35px;
   padding-right: 25px;
 }
+
+a:-webkit-any-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: -2px 6px 7px rgba(0, 0, 0, 0.98);
+}
+
+.catalog {
+  text-shadow: -2px 6px 7px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  letter-spacing: 2px;
+  /* z-index: 15; */
+}

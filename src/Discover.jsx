@@ -1,6 +1,6 @@
 export default function Discover() {
   return (
-    <p>
+    <p className="discover">
       We are elite.
       <br /> We are pretentious. <br /> We are better than you. <br />
       These are things we love. <br /> Possess them. Be like us. <br />
@@ -10,5 +10,7 @@ export default function Discover() {
 }
 
 export function Connect() {
-  return <p>We chose not to connect with those unlike us.</p>;
+  return (
+    <p className="connect">We choose not to connect with those unlike us.</p>
+  );
 }

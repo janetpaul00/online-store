@@ -1,16 +1,36 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
+  function getClassName({ isActive }) {
+    return isActive ? "navbar-active" : "";
+  }
+
+  function getCartClassName({ isActive }) {
+    return isActive ? "navbar-active cart-button" : "";
+  }
+
   return (
     <nav className="navbar">
       <div className="rept">
-        <Link to="/">
+        <NavLink to="/">
           <h1>Rpt Kllxn</h1>
-        </Link>
+        </NavLink>
       </div>
       <ul>
         <li>
-          <Link to="/catalog">Catalog</Link>
+          <NavLink className={getCartClassName} to="/cart">
+            Cart [0]
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className={getClassName} to="/catalog">
+            Catalog
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className={getClassName} to="/connect">
+            Connect
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -1,13 +1,19 @@
 // import "./catalog.css";
-import Items from "./Items";
+import Card from "./Card";
+import items from "./items";
 
 export default function Catalog() {
+  console.log(items);
   return (
-    <div className="catalog">
-      <style>{`#container {
-        background: white}`}</style>
-      <h2>Catalog</h2>
-      <Items />
-    </div>
+    <>
+      <div className="catalog">
+        <h2>Catalog</h2>
+        <div className="cards">
+          {items.map((item, index) => (
+            <Card key={index} item={item} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

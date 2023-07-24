@@ -41,7 +41,6 @@ button:focus-visible {
   flex-direction: column;
   justify-content: space-between;
 
-  background-image: url("./assets/background.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -88,8 +87,12 @@ h1 {
   padding-inline: 25px;
 }
 
+h2 {
+  font-weight: 100;
+  text-align: left;
+}
+
 a:-webkit-any-link {
-  color: black;
   cursor: pointer;
   text-decoration: none;
   text-shadow: -2px 6px 7px rgba(248, 232, 232, 0.98);
@@ -104,7 +107,8 @@ a:-webkit-any-link {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding-block: 2%;
-  gap: 16px;
+  column-gap: 20px;
+
   row-gap: 20px;
 }
 
@@ -140,4 +144,18 @@ a:-webkit-any-link {
   justify-content: space-between;
   padding-top: 4px;
   padding-bottom: 5px;
+}
+
+.navbar-active {
+  font-weight: 600;
+}
+
+.pending {
+  color: blue;
+  border: 10px solid red;
+}
+
+.item-showcase {
+  display: flex;
+  align-items: center;
 }

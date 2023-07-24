@@ -1,39 +1,12 @@
-import Card from "./Card";
+//import Card from "./Card";
+import { faker } from "@faker-js/faker";
 
-export default function Items() {
-  let items = [
-    {
-      name: "Autumnesque",
-      item: "Waist bag",
-      price: 900,
-    },
-    {
-      name: "Boxy Blaise",
-      item: "Outerwear/Jacket",
-      price: "1040",
-    },
-    {
-      name: "All seeing eye",
-      item: "Pink Bucket hat",
-      price: "400",
-    },
-    {
-      name: "Bloughmi",
-      item: "White linen blend top",
-      price: "550",
-    },
-    {
-      name: "Galaxy",
-      item: "Thick rimmed aviator sunglasses",
-      price: "1500",
-    },
-  ];
+let count = 1;
+let items = new Array(12).fill(0).map(() => ({
+  id: count++,
+  name: faker.commerce.productName(),
+  item: `${faker.color.human()} ${faker.commerce.productMaterial()} ${faker.commerce.product()}`,
+  price: faker.number.int({ min: 500, max: 2000 }),
+}));
 
-  return (
-    <div className="cards">
-      {items.map((item, index) => (
-        <Card key={index} item={item} />
-      ))}
-    </div>
-  );
-}
+export default items;
